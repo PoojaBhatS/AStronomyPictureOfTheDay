@@ -14,6 +14,14 @@
 		F0FC69A42C73689700F6B4FE /* AstronomyPicturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69A32C73689700F6B4FE /* AstronomyPicturesTests.swift */; };
 		F0FC69AE2C73689700F6B4FE /* AstronomyPicturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69AD2C73689700F6B4FE /* AstronomyPicturesUITests.swift */; };
 		F0FC69B02C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69AF2C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift */; };
+		F0FC69BD2C73708800F6B4FE /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69BC2C73708800F6B4FE /* APODViewModel.swift */; };
+		F0FC69BF2C7370C500F6B4FE /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69BE2C7370C500F6B4FE /* APOD.swift */; };
+		F0FC69C12C7370EF00F6B4FE /* APODNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C02C7370EF00F6B4FE /* APODNetworkService.swift */; };
+		F0FC69C32C73710500F6B4FE /* APODCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C22C73710500F6B4FE /* APODCacheManager.swift */; };
+		F0FC69C52C73712700F6B4FE /* APODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C42C73712700F6B4FE /* APODView.swift */; };
+		F0FC69C72C73717D00F6B4FE /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C62C73717D00F6B4FE /* APODSearchView.swift */; };
+		F0FC69C92C7371A500F6B4FE /* APODMediaPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C82C7371A500F6B4FE /* APODMediaPlayerView.swift */; };
+		F0FC69CB2C738A4A00F6B4FE /* APODDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69CA2C738A4A00F6B4FE /* APODDatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		F0FC69A92C73689700F6B4FE /* AstronomyPicturesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstronomyPicturesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FC69AD2C73689700F6B4FE /* AstronomyPicturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesUITests.swift; sourceTree = "<group>"; };
 		F0FC69AF2C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0FC69BC2C73708800F6B4FE /* APODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
+		F0FC69BE2C7370C500F6B4FE /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		F0FC69C02C7370EF00F6B4FE /* APODNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODNetworkService.swift; sourceTree = "<group>"; };
+		F0FC69C22C73710500F6B4FE /* APODCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCacheManager.swift; sourceTree = "<group>"; };
+		F0FC69C42C73712700F6B4FE /* APODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODView.swift; sourceTree = "<group>"; };
+		F0FC69C62C73717D00F6B4FE /* APODSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
+		F0FC69C82C7371A500F6B4FE /* APODMediaPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODMediaPlayerView.swift; sourceTree = "<group>"; };
+		F0FC69CA2C738A4A00F6B4FE /* APODDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODDatePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,14 @@
 			children = (
 				F0FC69922C73689500F6B4FE /* AstronomyPicturesApp.swift */,
 				F0FC69942C73689500F6B4FE /* ContentView.swift */,
+				F0FC69C42C73712700F6B4FE /* APODView.swift */,
+				F0FC69C62C73717D00F6B4FE /* APODSearchView.swift */,
+				F0FC69C82C7371A500F6B4FE /* APODMediaPlayerView.swift */,
+				F0FC69CA2C738A4A00F6B4FE /* APODDatePickerView.swift */,
+				F0FC69BC2C73708800F6B4FE /* APODViewModel.swift */,
+				F0FC69BE2C7370C500F6B4FE /* APOD.swift */,
+				F0FC69C02C7370EF00F6B4FE /* APODNetworkService.swift */,
+				F0FC69C22C73710500F6B4FE /* APODCacheManager.swift */,
 				F0FC69962C73689600F6B4FE /* Assets.xcassets */,
 				F0FC69982C73689600F6B4FE /* Preview Content */,
 			);
@@ -257,8 +281,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FC69C12C7370EF00F6B4FE /* APODNetworkService.swift in Sources */,
+				F0FC69C92C7371A500F6B4FE /* APODMediaPlayerView.swift in Sources */,
 				F0FC69952C73689500F6B4FE /* ContentView.swift in Sources */,
 				F0FC69932C73689500F6B4FE /* AstronomyPicturesApp.swift in Sources */,
+				F0FC69CB2C738A4A00F6B4FE /* APODDatePickerView.swift in Sources */,
+				F0FC69C52C73712700F6B4FE /* APODView.swift in Sources */,
+				F0FC69C72C73717D00F6B4FE /* APODSearchView.swift in Sources */,
+				F0FC69BD2C73708800F6B4FE /* APODViewModel.swift in Sources */,
+				F0FC69C32C73710500F6B4FE /* APODCacheManager.swift in Sources */,
+				F0FC69BF2C7370C500F6B4FE /* APOD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +462,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +492,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
