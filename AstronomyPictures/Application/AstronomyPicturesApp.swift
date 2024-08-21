@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct AstronomyPicturesApp: App {
+	let dependencyContainer = AppDIContainer()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainContentView(dependencyContainer: dependencyContainer)
         }
     }
 }

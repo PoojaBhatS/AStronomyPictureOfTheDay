@@ -10,30 +10,17 @@ import SwiftUI
 struct APODDatePickerView: View {
 	@Binding var isPresented: Bool
 	@Binding var selectedDate: Date
-	@ObservedObject var viewModel: APODViewModel
 	
 	var body: some View {
 		NavigationView {
-			VStack {
-				DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
+			VStack() {
+				DatePicker("Select Date", selection: $selectedDate, in: ...Date(), displayedComponents: .date)
 					.datePickerStyle(GraphicalDatePickerStyle())
 					.padding()
-				
-				Button("Load APOD") {
-					Task {
-						let dateFormatter = DateFormatter()
-						dateFormatter.dateFormat = "yyyy-MM-dd"
-						let dateStr = dateFormatter.string(from: selectedDate)
-						await viewModel.fetchAPOD(for: dateStr)
-						isPresented = false
-					}
-				}
-				.padding()
-				
-				Spacer()
+					.frame(alignment: .top)
 			}
 			.navigationTitle("Select Date")
-			.navigationBarItems(trailing: Button("Done") {
+			.navigationBarItems(trailing: Button("Dismiss") {
 				isPresented = false
 			})
 		}
