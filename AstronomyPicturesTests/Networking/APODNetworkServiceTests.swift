@@ -52,7 +52,7 @@ final class APODNetworkServiceTests: XCTestCase {
 			let _ = try await serviceUnderTest.loadData(for: nil)
 			XCTFail("Expected to throw invalidData error, but succeeded.")
 		} catch {
-			XCTAssertTrue(error is APODNetworkService.Error, "Expected APODNetworkService.Error.invalidData, but got a different error.")
+			XCTAssertTrue(error is DataServiceError, "Expected DataServiceError.invalidData, but got a different error.")
 		}
 	}
 	
@@ -80,7 +80,7 @@ final class APODNetworkServiceTests: XCTestCase {
 			let _ = try await serviceUnderTest.loadData(from: url)
 			XCTFail("Expected to throw connectivity error, but succeeded.")
 		} catch {
-			XCTAssertTrue(error is APODNetworkService.Error, "Expected APODNetworkService.Error.connectivity, but got a different error.")
+			XCTAssertTrue(error is DataServiceError, "Expected DataServiceError.invalidData, but got a different error.")
 		}
 	}
 	
