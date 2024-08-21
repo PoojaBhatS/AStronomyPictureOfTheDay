@@ -3,18 +3,13 @@ NSAS APOD Swift Project
 
 Welcome to the NSAS APOD Swift Project! This project is a Swift-based iOS application that fetches and displays the Astronomy Picture of the Day (APOD) from NASA's public API. The app showcases the image or video of the day along with a brief description, making space exploration accessible and engaging for users.
 
-**Table of Contents**
-
-Features
-Installation
-Usage
-
+**Features:**
 Daily Updates: Fetches the Astronomy Picture of the Day from NASA's APOD API.
 Image and Video Support: Displays both images and videos as provided by the APOD API.
 Detailed Descriptions: Shows the title, date, and explanation provided by NASA.
-User-Friendly Interface: Simple and intuitive UI for an optimal user experience.
-Installation
+User-Friendly Interface: Simple and intuitive UI for an optimal user experience. Works on both iPhone and iPAds. 
 
+**Installation**
 Prerequisites
 Xcode 15.0 or later
 iOS 16.0 or later
