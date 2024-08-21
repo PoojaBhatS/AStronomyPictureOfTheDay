@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Model Objects for parsing and storing data reveived from network
 struct APODResponse: Codable {
 	let items: [APOD]
 }

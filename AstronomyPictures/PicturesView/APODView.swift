@@ -7,15 +7,18 @@
 
 import SwiftUI
 
+/// This view loads and displays the details of Astronomy Picture of the day
+/// Also allows the user to load Astronomy Picture details for a selected date
+
 struct APODView: View {
 	@ObservedObject var viewModel: APODViewModel
 	@State private var isDatePickerPresented = false
 	@State private var selectedDate = Date()
 	
 	var body: some View {
-		NavigationView {
+		NavigationStack {
 			Group {
-				switch viewModel.apod {
+				switch viewModel.apodDisplayState {
 					case let .display(state):
 						if state.isLoading {
 							ProgressView()
@@ -29,11 +32,13 @@ struct APODView: View {
 										.font(.title)
 										.padding()
 										.multilineTextAlignment(.leading)
+										.accessibilityIdentifier("APODTitle")
 									
 									Text(item.date.asMediumFormatDateString)
 										.font(.title2)
 										.padding()
 										.multilineTextAlignment(.leading)
+										.accessibilityIdentifier("Date")
 									
 									switch item.mediaType {
 										case .image:
@@ -43,6 +48,7 @@ struct APODView: View {
 													.aspectRatio(contentMode: .fit)
 													.frame(maxWidth: .infinity, alignment: .center)
 													.padding(.vertical, 8)
+													.accessibilityIdentifier("APODImage")
 											} else {
 												ProgressView()
 													.onAppear {
@@ -61,6 +67,7 @@ struct APODView: View {
 									
 									Text(item.explanation)
 										.padding()
+										.accessibilityIdentifier("APODExplanation")
 								}
 							}
 						}
@@ -77,6 +84,7 @@ struct APODView: View {
 						isDatePickerPresented.toggle()
 					}) {
 						Image(systemName: "calendar")
+							.accessibilityIdentifier("Calendar")
 					}
 					.sheet(isPresented: $isDatePickerPresented) {
 						APODDatePickerView(isPresented: $isDatePickerPresented, selectedDate: $selectedDate)
@@ -114,7 +122,3 @@ private extension Date {
 		return Utilities.mediumDateFormatter.string(from: self)
 	}
 }
-
-//#Preview {
-//    APODView()
-//}

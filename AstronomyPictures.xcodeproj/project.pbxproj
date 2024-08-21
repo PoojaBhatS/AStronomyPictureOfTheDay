@@ -12,6 +12,12 @@
 		F0123C3A2C755E6E002C0449 /* APODEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0123C382C755E6E002C0449 /* APODEntity+CoreDataClass.swift */; };
 		F0123C402C756BD1002C0449 /* APODMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0123C3F2C756BD1002C0449 /* APODMocks.swift */; };
 		F0123C422C756D0A002C0449 /* apod.json in Resources */ = {isa = PBXBuildFile; fileRef = F0123C412C756D0A002C0449 /* apod.json */; };
+		F015366C2C7600C700534405 /* APODNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015366B2C7600C700534405 /* APODNetworkServiceTests.swift */; };
+		F015366E2C7600FB00534405 /* MockingURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015366D2C7600FB00534405 /* MockingURLProtocol.swift */; };
+		F01536702C76012C00534405 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015366F2C76012C00534405 /* NetworkServiceTests.swift */; };
+		F01536722C76120000534405 /* APODViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01536712C76120000534405 /* APODViewModelTests.swift */; };
+		F01536752C761EE900534405 /* Network+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01536742C761EE900534405 /* Network+Helpers.swift */; };
+		F01536772C76202C00534405 /* GenericDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01536762C76202C00534405 /* GenericDisplay.swift */; };
 		F0AFD84D2C74A3C500FDC740 /* APODPersistentStorageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0AFD84B2C74A3C500FDC740 /* APODPersistentStorageModel.xcdatamodeld */; };
 		F0AFD8572C74B9E700FDC740 /* APODDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AFD8562C74B9E700FDC740 /* APODDataManager.swift */; };
 		F0FC69932C73689500F6B4FE /* AstronomyPicturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69922C73689500F6B4FE /* AstronomyPicturesApp.swift */; };
@@ -20,12 +26,10 @@
 		F0FC699A2C73689600F6B4FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FC69992C73689600F6B4FE /* Preview Assets.xcassets */; };
 		F0FC69A42C73689700F6B4FE /* AstronomyPicturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69A32C73689700F6B4FE /* AstronomyPicturesTests.swift */; };
 		F0FC69AE2C73689700F6B4FE /* AstronomyPicturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69AD2C73689700F6B4FE /* AstronomyPicturesUITests.swift */; };
-		F0FC69B02C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69AF2C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift */; };
 		F0FC69BD2C73708800F6B4FE /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69BC2C73708800F6B4FE /* APODViewModel.swift */; };
 		F0FC69BF2C7370C500F6B4FE /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69BE2C7370C500F6B4FE /* APOD.swift */; };
 		F0FC69C12C7370EF00F6B4FE /* APODNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C02C7370EF00F6B4FE /* APODNetworkService.swift */; };
 		F0FC69C52C73712700F6B4FE /* APODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C42C73712700F6B4FE /* APODView.swift */; };
-		F0FC69C72C73717D00F6B4FE /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C62C73717D00F6B4FE /* APODSearchView.swift */; };
 		F0FC69C92C7371A500F6B4FE /* APODMediaPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69C82C7371A500F6B4FE /* APODMediaPlayerView.swift */; };
 		F0FC69CB2C738A4A00F6B4FE /* APODDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69CA2C738A4A00F6B4FE /* APODDatePickerView.swift */; };
 		F0FC69CF2C74074C00F6B4FE /* APODData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC69CE2C74074C00F6B4FE /* APODData.swift */; };
@@ -57,6 +61,12 @@
 		F0123C382C755E6E002C0449 /* APODEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APODEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0123C3F2C756BD1002C0449 /* APODMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODMocks.swift; sourceTree = "<group>"; };
 		F0123C412C756D0A002C0449 /* apod.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apod.json; sourceTree = "<group>"; };
+		F015366B2C7600C700534405 /* APODNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODNetworkServiceTests.swift; sourceTree = "<group>"; };
+		F015366D2C7600FB00534405 /* MockingURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingURLProtocol.swift; sourceTree = "<group>"; };
+		F015366F2C76012C00534405 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		F01536712C76120000534405 /* APODViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModelTests.swift; sourceTree = "<group>"; };
+		F01536742C761EE900534405 /* Network+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Helpers.swift"; sourceTree = "<group>"; };
+		F01536762C76202C00534405 /* GenericDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDisplay.swift; sourceTree = "<group>"; };
 		F0AFD84C2C74A3C500FDC740 /* APODPersistentStorageModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = APODPersistentStorageModel.xcdatamodel; sourceTree = "<group>"; };
 		F0AFD8562C74B9E700FDC740 /* APODDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODDataManager.swift; sourceTree = "<group>"; };
 		F0AFD85C2C74F65100FDC740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -69,12 +79,10 @@
 		F0FC69A32C73689700F6B4FE /* AstronomyPicturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesTests.swift; sourceTree = "<group>"; };
 		F0FC69A92C73689700F6B4FE /* AstronomyPicturesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstronomyPicturesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FC69AD2C73689700F6B4FE /* AstronomyPicturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesUITests.swift; sourceTree = "<group>"; };
-		F0FC69AF2C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicturesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0FC69BC2C73708800F6B4FE /* APODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
 		F0FC69BE2C7370C500F6B4FE /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		F0FC69C02C7370EF00F6B4FE /* APODNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODNetworkService.swift; sourceTree = "<group>"; };
 		F0FC69C42C73712700F6B4FE /* APODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODView.swift; sourceTree = "<group>"; };
-		F0FC69C62C73717D00F6B4FE /* APODSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
 		F0FC69C82C7371A500F6B4FE /* APODMediaPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODMediaPlayerView.swift; sourceTree = "<group>"; };
 		F0FC69CA2C738A4A00F6B4FE /* APODDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODDatePickerView.swift; sourceTree = "<group>"; };
 		F0FC69CE2C74074C00F6B4FE /* APODData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODData.swift; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 		F0123C2C2C753640002C0449 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F01536762C76202C00534405 /* GenericDisplay.swift */,
 				F0123C2D2C7536BA002C0449 /* Utilities.swift */,
 			);
 			path = Helpers;
@@ -119,6 +128,7 @@
 		F0123C3B2C756B39002C0449 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F01536712C76120000534405 /* APODViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -126,23 +136,27 @@
 		F0123C3C2C756B48002C0449 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F015366B2C7600C700534405 /* APODNetworkServiceTests.swift */,
+				F015366F2C76012C00534405 /* NetworkServiceTests.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		F0123C3D2C756B52002C0449 /* PersistentStorage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PersistentStorage;
 			sourceTree = "<group>";
 		};
 		F0123C3E2C756BA3002C0449 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				F0123C3F2C756BD1002C0449 /* APODMocks.swift */,
+				F015366D2C7600FB00534405 /* MockingURLProtocol.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F01536732C761AB800534405 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC69BE2C7370C500F6B4FE /* APOD.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		F0FC69862C73689500F6B4FE = {
@@ -170,14 +184,15 @@
 			isa = PBXGroup;
 			children = (
 				F0FC69D22C74086500F6B4FE /* Application */,
-				F0123C2C2C753640002C0449 /* Helpers */,
-				F0AFD85C2C74F65100FDC740 /* Info.plist */,
-				F0123C412C756D0A002C0449 /* apod.json */,
 				F0FC69D02C7407A300F6B4FE /* Main View */,
+				F0FC69CC2C7406DD00F6B4FE /* PicturesView */,
 				F0FC69D12C74080E00F6B4FE /* Network */,
 				F0FC69D32C74088200F6B4FE /* PersistentStorages */,
-				F0FC69CC2C7406DD00F6B4FE /* PicturesView */,
+				F0FC69CD2C74070C00F6B4FE /* ViewModel */,
+				F0123C2C2C753640002C0449 /* Helpers */,
 				F0FC69982C73689600F6B4FE /* Preview Content */,
+				F0AFD85C2C74F65100FDC740 /* Info.plist */,
+				F0123C412C756D0A002C0449 /* apod.json */,
 			);
 			path = AstronomyPictures;
 			sourceTree = "<group>";
@@ -195,7 +210,6 @@
 			children = (
 				F0FC69A32C73689700F6B4FE /* AstronomyPicturesTests.swift */,
 				F0123C3E2C756BA3002C0449 /* Mocks */,
-				F0123C3D2C756B52002C0449 /* PersistentStorage */,
 				F0123C3C2C756B48002C0449 /* Networking */,
 				F0123C3B2C756B39002C0449 /* ViewModel */,
 			);
@@ -206,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				F0FC69AD2C73689700F6B4FE /* AstronomyPicturesUITests.swift */,
-				F0FC69AF2C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift */,
 			);
 			path = AstronomyPicturesUITests;
 			sourceTree = "<group>";
@@ -216,9 +229,7 @@
 			children = (
 				F0FC69CA2C738A4A00F6B4FE /* APODDatePickerView.swift */,
 				F0FC69C82C7371A500F6B4FE /* APODMediaPlayerView.swift */,
-				F0FC69C62C73717D00F6B4FE /* APODSearchView.swift */,
 				F0FC69C42C73712700F6B4FE /* APODView.swift */,
-				F0FC69CD2C74070C00F6B4FE /* ViewModel */,
 			);
 			path = PicturesView;
 			sourceTree = "<group>";
@@ -226,8 +237,8 @@
 		F0FC69CD2C74070C00F6B4FE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F0FC69BC2C73708800F6B4FE /* APODViewModel.swift */,
 				F0FC69CE2C74074C00F6B4FE /* APODData.swift */,
+				F0FC69BC2C73708800F6B4FE /* APODViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,8 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				F0FC69C02C7370EF00F6B4FE /* APODNetworkService.swift */,
+				F0FC69D52C74095000F6B4FE /* Models */,
+				F01536742C761EE900534405 /* Network+Helpers.swift */,
 				F0FC69DC2C740C7000F6B4FE /* NetworkService.swift */,
-				F0FC69D52C74095000F6B4FE /* DataMapping */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -253,8 +265,8 @@
 		F0FC69D22C74086500F6B4FE /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				F0FC69922C73689500F6B4FE /* AstronomyPicturesApp.swift */,
 				F0FC69D62C7409E300F6B4FE /* AppConfigurations.swift */,
+				F0FC69922C73689500F6B4FE /* AstronomyPicturesApp.swift */,
 				F0FC69D92C740AF500F6B4FE /* Dependencies */,
 			);
 			path = Application;
@@ -279,12 +291,12 @@
 			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
-		F0FC69D52C74095000F6B4FE /* DataMapping */ = {
+		F0FC69D52C74095000F6B4FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F0FC69BE2C7370C500F6B4FE /* APOD.swift */,
+				F01536732C761AB800534405 /* Response */,
 			);
-			path = DataMapping;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F0FC69D92C740AF500F6B4FE /* Dependencies */ = {
@@ -429,6 +441,7 @@
 				F0FC69DD2C740C7000F6B4FE /* NetworkService.swift in Sources */,
 				F0FC69C12C7370EF00F6B4FE /* APODNetworkService.swift in Sources */,
 				F0FC69C92C7371A500F6B4FE /* APODMediaPlayerView.swift in Sources */,
+				F01536772C76202C00534405 /* GenericDisplay.swift in Sources */,
 				F0FC69952C73689500F6B4FE /* MainContentView.swift in Sources */,
 				F0123C3A2C755E6E002C0449 /* APODEntity+CoreDataClass.swift in Sources */,
 				F0FC69DB2C740B1900F6B4FE /* AppDIContainer.swift in Sources */,
@@ -438,8 +451,8 @@
 				F0FC69C52C73712700F6B4FE /* APODView.swift in Sources */,
 				F0123C392C755E6E002C0449 /* APODEntity+CoreDataProperties.swift in Sources */,
 				F0FC69CF2C74074C00F6B4FE /* APODData.swift in Sources */,
+				F01536752C761EE900534405 /* Network+Helpers.swift in Sources */,
 				F0123C2E2C7536BA002C0449 /* Utilities.swift in Sources */,
-				F0FC69C72C73717D00F6B4FE /* APODSearchView.swift in Sources */,
 				F0AFD8572C74B9E700FDC740 /* APODDataManager.swift in Sources */,
 				F0FC69BD2C73708800F6B4FE /* APODViewModel.swift in Sources */,
 				F0FC69D72C7409E300F6B4FE /* AppConfigurations.swift in Sources */,
@@ -451,8 +464,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01536722C76120000534405 /* APODViewModelTests.swift in Sources */,
+				F01536702C76012C00534405 /* NetworkServiceTests.swift in Sources */,
+				F015366E2C7600FB00534405 /* MockingURLProtocol.swift in Sources */,
 				F0FC69A42C73689700F6B4FE /* AstronomyPicturesTests.swift in Sources */,
 				F0123C402C756BD1002C0449 /* APODMocks.swift in Sources */,
+				F015366C2C7600C700534405 /* APODNetworkServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +477,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0FC69B02C73689700F6B4FE /* AstronomyPicturesUITestsLaunchTests.swift in Sources */,
 				F0FC69AE2C73689700F6B4FE /* AstronomyPicturesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

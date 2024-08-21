@@ -7,13 +7,17 @@
 
 import Foundation
 
-final class AppDIContainer: ObservableObject {
+/// A Class that provides single point of access for all Dependencies
+
+final class AppDIContainer {
 	
+	// MARK: - Configuration
 	lazy var appConfiguration: AppConfigurationProviding = {
 		return AppConfiguration()
 	}()
 
-	lazy var dataStorageService: APODDataManager = {
+	// MARK: - Data Storage
+	lazy var dataStorageService: APODDataManagerProviding = {
 		return APODDataManager.shared
 	}()
 

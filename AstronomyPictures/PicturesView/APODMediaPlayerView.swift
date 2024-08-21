@@ -8,6 +8,7 @@
 import SwiftUI
 import WebKit
 
+/// A Wrapper view around `WKWebView` to load videos from provided URL
 struct APODMediaPlayerView: UIViewRepresentable {
 	let url: URL
 	
@@ -20,7 +21,3 @@ struct APODMediaPlayerView: UIViewRepresentable {
 		uiView.load(request)
 	}
 }
-
-//#Preview {
-//	APODMediaPlayerView(url: <#URL#>)
-//}

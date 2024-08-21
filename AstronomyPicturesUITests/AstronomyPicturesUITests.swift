@@ -9,33 +9,43 @@ import XCTest
 
 final class AstronomyPicturesUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+	var app: XCUIApplication!
+	
+	override func setUp() {
+		super.setUp()
+		app = XCUIApplication()
+		continueAfterFailure = false
+	}
+	override func tearDown() {
+		app = nil
+		super.tearDown()
+	}
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
+    func testPictureOfTheDayView() throws {
         // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+		app.launch()
+		// Use the XCUIElementQuery to locate the title Text
+		let titleText = app.staticTexts["APODTitle"]
+		// Check if the title text is visible
+		XCTAssertTrue(titleText.waitForExistence(timeout: 5))
+		
+		let dateText = app.staticTexts["Date"]
+		XCTAssertTrue(dateText.exists)
+		
+		let description = app.staticTexts["APODExplanation"]
+		XCTAssertTrue(dateText.exists)
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+	func testDatePicker() throws {
+		app.launch()
+		let calendarButton = app.navigationBars["NASA APOD"].buttons["Calendar"]
+		XCTAssertTrue(calendarButton.waitForExistence(timeout: 10))
+		calendarButton.tap()
+		
+		let datePickerView = app.datePickers["Select Date"]
+		XCTAssertTrue(datePickerView.exists)
+		app.datePickers["Select Date"].collectionViews/*@START_MENU_TOKEN@*/.staticTexts["17"]/*[[".buttons[\"Saturday 17 August\"].staticTexts[\"17\"]",".staticTexts[\"17\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+		Thread.sleep(forTimeInterval: 1)
+		XCTAssertFalse(datePickerView.exists)
+	}
 }

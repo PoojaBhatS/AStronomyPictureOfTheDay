@@ -6,11 +6,13 @@
 //
 
 import Foundation
-
+/// A Protocol that provides the contract for a service that is responsible for setting up necessary configurations
 protocol AppConfigurationProviding {
 	var apiBaseURL: String { get }
 	var apiKey: String { get }
 }
+
+/// App configurations are stored here to maintain the constants.
 
 final class AppConfiguration: AppConfigurationProviding {
 

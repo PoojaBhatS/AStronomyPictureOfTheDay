@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A Custom view with Date Picker Component
 struct APODDatePickerView: View {
 	@Binding var isPresented: Bool
 	@Binding var selectedDate: Date
@@ -14,7 +15,7 @@ struct APODDatePickerView: View {
 	var body: some View {
 		NavigationView {
 			VStack() {
-				DatePicker("Select Date", selection: $selectedDate, in: ...Date(), displayedComponents: .date)
+				DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
 					.datePickerStyle(GraphicalDatePickerStyle())
 					.padding()
 					.frame(alignment: .top)
@@ -26,7 +27,3 @@ struct APODDatePickerView: View {
 		}
 	}
 }
-
-//#Preview {
-//	APODDatePickerView(isPresented: true, selectedDate: <#Binding<Date>#>, viewModel: <#APODViewModel#>)
-//}

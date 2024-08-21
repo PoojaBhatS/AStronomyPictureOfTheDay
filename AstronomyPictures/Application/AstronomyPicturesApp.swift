@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Entry point of execusion of the app
 @main
 struct AstronomyPicturesApp: App {
 	let dependencyContainer = AppDIContainer()

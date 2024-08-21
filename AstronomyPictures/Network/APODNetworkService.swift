@@ -7,18 +7,18 @@
 
 import Foundation
 
+/// A Protocol that defines the contract for a service that is responsible for fetching data
+/// related to Astronomy Picture Of the Day(APOD) from a network source
 protocol APODNetworkServiceProviding {
 	var networkService: NetworkServiceProviding { get }
 	func loadData(for date: Date?) async throws -> APODData
 	func loadData(from url: URL) async throws -> Data
 }
 
+/// A class that conforms to `APODNetworkServiceProviding` for fetching data
+/// related to Astronomy Picture Of the Day(APOD) from a network source
 final class APODNetworkService: APODNetworkServiceProviding {
-	
-	enum Error: Swift.Error {
-		case connectivity, invalidData
-	}
-	
+		
 	let networkService: NetworkServiceProviding
 	let appConfiguration: AppConfigurationProviding
 	
@@ -51,16 +51,16 @@ final class APODNetworkService: APODNetworkServiceProviding {
 						let apodResponse = try APODResponseMapper<APOD>.decodeAndMap(data)
 						return APODData(from: apodResponse)
 					} catch {
-						throw Error.invalidData
+						throw DataServiceError.invalidData
 					}
 					
 				case .failure:
-					throw Error.connectivity
+					throw DataServiceError.invalidData
 			}
 
 		}
 		catch {
-			throw Error.connectivity
+			throw DataServiceError.invalidData
 		}
 	}
 
@@ -72,11 +72,11 @@ final class APODNetworkService: APODNetworkServiceProviding {
 				case let .success(data):
 						return data
 				case .failure:
-					throw Error.connectivity
+					throw DataServiceError.invalidData
 			}
 		}
 		catch {
-			throw Error.connectivity
+			throw DataServiceError.invalidData
 		}
 	}
 }
@@ -113,10 +113,20 @@ final class APODResponseMapper<T: Decodable> {
 		let decoder = JSONDecoder()
 		decoder.dateDecodingStrategy = .formatted(Utilities.dateFormatter)
 		guard let decodable = try? decoder.decode(T.self, from: data) else {
-			throw APODNetworkService.Error.invalidData
+			throw DataServiceError.invalidData
 		}
 		return decodable
 	}
+	
+	static func encodeAndMap(_ T: Codable) throws -> Data {
+		let encoder = JSONEncoder()
+		encoder.dateEncodingStrategy = .formatted(Utilities.dateFormatter)
+		guard let encodedData = try? encoder.encode(T.self) else {
+			throw DataServiceError.invalidData
+		}
+		return encodedData
+	}
+
 }
 
 private extension Date {

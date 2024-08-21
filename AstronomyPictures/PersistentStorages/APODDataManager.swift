@@ -10,15 +10,27 @@ import Foundation
 import CoreData
 import Foundation
 
-// Main data manager to handle the todo items
-final class APODDataManager {
+/// A Protocol that defines the contract for a service that is responsible for loading
+/// and storing persistent data related to Astronomy Picture Of the Day(APOD)
+/// from a persistent source
+protocol APODDataManagerProviding {
+	func fetchAPODFor(date: Date, completionHandler: @escaping (APODData?, Error?) -> Void)
+	func storeAPOD(data: APODData)
+	func storeAPODImage(imageData: Data, date: Date)
+}
+
+/// Main data manager to handle the APOD storage
+/// A class that conforms to `APODDataManagerProviding` for handling data loading
+/// and storing into persistent data storage
+
+final class APODDataManager: APODDataManagerProviding {
 	
 	static let shared = APODDataManager()
 
 	// Add the Core Data container with the model name
 	private let container: NSPersistentContainer
 	
-	// Default init method. Load the Core Data container
+	// init method. Load the Core Data container
 	private init(inMemory: Bool = false) {
 		container = NSPersistentContainer(name: "APODPersistentStorageModel")
 		if inMemory {
@@ -32,6 +44,10 @@ final class APODDataManager {
 		container.viewContext.automaticallyMergesChangesFromParent = true
 	}
 	
+	//MARK: -Data storage to Core data
+	
+	/// Function to store the APOD to coredata
+	/// - Parameter data: object of type `APODData`
 	func storeAPOD(data: APODData) {
 		var dataToStore: APODEntity
 		
@@ -43,7 +59,7 @@ final class APODDataManager {
 		do {
 			let result = try container.viewContext.fetch(request)
 			if !result.isEmpty, let existingAPOD = result.first {
-				//Update the values from new data
+				//Update the values from new data if there is an entry
 				dataToStore = existingAPOD
 			} else {
 				//Create new entity entry
@@ -61,6 +77,9 @@ final class APODDataManager {
 		}
 	}
 
+	/// Function to store the image to coredata
+	/// - Parameter imageData: image converted to type Data
+	/// - Parameter date: selected date for saving the image data to persistent storage
 	func storeAPODImage(imageData: Data, date: Date) {
 		var dataToStore: APODEntity
 		
@@ -75,8 +94,7 @@ final class APODDataManager {
 				//Update the values from new data
 				dataToStore = existingAPOD
 			} else {
-				//Create new entity entry
-				throw DataServiceError.unknown
+				throw DataServiceError.invalidData
 			}
 			dataToStore.image = imageData
 			saveContext()
@@ -86,7 +104,8 @@ final class APODDataManager {
 		}
 	}
 
-	
+	///Function to fetch the APOD from coredata
+	/// - Parameter date: object of type `Date` that returns a matching record if present
 	func fetchAPODFor(date: Date, completionHandler: @escaping (APODData?, Error?) -> Void) {
 		let predicate = NSPredicate(format: "date == %@", date as CVarArg)
 		let request = APODEntity.fetchRequest()
@@ -114,7 +133,7 @@ final class APODDataManager {
 		}
 	}
 	
-	func saveContext() {
+	private func saveContext() {
 		if container.viewContext.hasChanges {
 			do {
 				try container.viewContext.save()
